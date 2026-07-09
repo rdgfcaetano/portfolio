@@ -40,8 +40,15 @@ export function Navbar() {
           <a
             href="#top"
             aria-label="Início"
-            className="h-8 w-8 rounded-md bg-accent transition-opacity duration-200 hover:opacity-80"
-          />
+            className="group inline-flex items-center gap-3"
+          >
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-accent/35 bg-accent/10 text-sm font-semibold text-accent transition-colors duration-200 group-hover:border-accent/60 group-hover:bg-accent/15">
+              RC
+            </span>
+            <span className="hidden text-sm font-semibold text-foreground sm:inline">
+              Rodrigo Caetano
+            </span>
+          </a>
 
           <ul className="hidden items-center gap-8 md:flex">
             {NAV_ITEMS.map((item) => (

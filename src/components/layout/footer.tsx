@@ -1,6 +1,5 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Container } from "@/components/ui/container";
-import { Skeleton } from "@/components/ui/skeleton";
 import { NAV_ITEMS } from "@/data/navigation";
 
 const SOCIAL_ICONS = [
@@ -31,8 +30,17 @@ export function Footer() {
     <footer className="border-t border-white/10">
       <Container className="flex flex-col gap-8 py-12 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-3">
-          <div className="h-8 w-8 rounded-md bg-accent" />
-          <Skeleton className="h-4 w-24" />
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-accent/35 bg-accent/10 text-sm font-semibold text-accent">
+            RC
+          </div>
+          <div className="flex flex-col gap-1">
+            <span className="text-sm font-semibold text-foreground">
+              Rodrigo Caetano
+            </span>
+            <span className="text-xs text-muted-foreground">
+              Desenvolvedor Front-end
+            </span>
+          </div>
         </div>
 
         <ul className="flex flex-wrap items-center gap-x-6 gap-y-2">
@@ -66,7 +74,7 @@ export function Footer() {
 
       <Container className="pb-8">
         <p className="text-xs text-muted-foreground">
-          © {year} — Todos os direitos reservados.
+          © {year} - Todos os direitos reservados.
         </p>
       </Container>
     </footer>
